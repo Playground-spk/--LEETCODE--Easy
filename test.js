@@ -108,7 +108,33 @@ let kidsWithCandies = function(candies, extraCandies) {
 
 };
 
-console.log(shuffle([1,2,3,4,5,6],3))
+// =========================================================================================================
+
+// 1678. Goal Parser Interpretation
+
+//  const interpret = (command) => command.replace(/\(\)/g, 'o').replace(/\(al\)/g, 'al');
+const interpret = function(command) {
+
+    let interpretedString =''
+    
+    for(let i = 0; i < command.length; i++){
+       if(command[i] === 'G'){
+        interpretedString += command[i]
+       }else if (command[i] === ')'){
+              interpretedString += command[i-1] ==='('? 'o': 'al'
+       }
+    }
+
+    return interpretedString
+};
+
+
+
+
+
+
+
+
 
 
 
